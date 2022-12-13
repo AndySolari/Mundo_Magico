@@ -1,10 +1,10 @@
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
-    header.classList.toggle("abajo",this.window.scrollY>0);
+    header.classList.toggle("abajo", this.window.scrollY > 0);
 });
 
 
- //-------------------------------------------
+//-------------------------------------------
 
 // Inicialización de variables
 
@@ -27,25 +27,25 @@ let mostrarAciertos = document.getElementById("aciertos");
 let mostrarTiempo = document.getElementById("t-restante");
 
 // Generación de números aleatorios
-let num = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
-num = num.sort(()=>{return Math.random() -0.5});
+let num = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+num = num.sort(() => { return Math.random() - 0.5 });
 console.log(num);
 
 
 // Funciones
-function contarTiempo(){
-    tiempoRegresivo = setInterval(()=>{
+function contarTiempo() {
+    tiempoRegresivo = setInterval(() => {
         tiempo--;
         mostrarTiempo.innerHTML = `Tiempo ${tiempo} segundos`;
-        if(tiempo === 0){
+        if (tiempo === 0) {
             clearInterval(tiempoRegresivo);
             bloquearTarjetas();
         }
-    },1000);
+    }, 1000);
 }
 
-function bloquearTarjetas(){
-    for(let i = 0; i<=15; i++){
+function bloquearTarjetas() {
+    for (let i = 0; i <= 15; i++) {
         let tarjetaBloqueada = document.getElementById(i);
         tarjetaBloqueada.innerHTML = num[i];
         tarjetaBloqueada.disabled = true;
@@ -53,8 +53,8 @@ function bloquearTarjetas(){
 }
 
 // Función principal del click
-function descubrir(id){
-    if(temporizador === false){
+function descubrir(id) {
+    if (temporizador === false) {
         contarTiempo();
         temporizador = true;
     }
@@ -62,15 +62,15 @@ function descubrir(id){
     descubrirTarjetas++;
     console.log(descubrirTarjetas);
 
-    if(descubrirTarjetas === 1){
+    if (descubrirTarjetas === 1) {
         //muestra el primer numero
         tarjeta1 = document.getElementById(id);
         resultado1 = num[id];
         tarjeta1.innerHTML = resultado1;
 
-       //Deshabilitar primer boton
+        //Deshabilitar primer boton
         tarjeta1.disabled = true;
-    }else if(descubrirTarjetas === 2){
+    } else if (descubrirTarjetas === 2) {
         //mostrar segundo numero
         tarjeta2 = document.getElementById(id);
         resultado2 = num[id];
@@ -83,7 +83,7 @@ function descubrir(id){
         movimientos++;
         mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
 
-        if(resultado1 === resultado2){
+        if (resultado1 === resultado2) {
             //Poner en cero el contador tarjetas descubiertas
             descubrirTarjetas = 0;
 
@@ -91,21 +91,21 @@ function descubrir(id){
             aciertos++;
             mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
 
-            if(aciertos === 8){
+            if (aciertos === 8) {
                 clearInterval(tiempoRegresivo);
                 mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 😱`;
-                mostrarTiempo.innerHTML =  `Fantástico! 🥳🎉 Sólo demoraste ${tiempoInicial - tiempo } segundos `
+                mostrarTiempo.innerHTML = `Fantástico! 🥳🎉 Sólo demoraste ${tiempoInicial - tiempo} segundos `
                 mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} ✌😎 `
             }
-        }else{
+        } else {
             //Mostrar momentaneamente valores y volver a tapar
-            setTimeout(()=>{
+            setTimeout(() => {
                 tarjeta1.innerHTML = " ";
                 tarjeta2.innerHTML = " ";
                 tarjeta1.disabled = false;
                 tarjeta2.disabled = false;
                 descubrirTarjetas = 0;
-            },800);
+            }, 800);
         }
     }
 }

@@ -10,10 +10,12 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-.logo{
+
+.logo {
     width: 150px;
     height: 70px;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -148,7 +150,7 @@ p {
 .card .contenido-card {
     padding: 15px;
     text-align: center;
-    font-family:  'Merienda', cursive;
+    font-family: 'Merienda', cursive;
 }
 
 .card .contenido-card h3 {
