@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/juegos.css">
     <title>Juegos</title>
 </head>
 <body>
@@ -14,19 +15,61 @@
     <nav>
         <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../pages/historia.html">Historia</a></li>
-            <li><a href="../pages/juegos.html">Juegos</a></li>
-            <li><a href="../pages/contacto.html">Contacto</a></li>
+            <li><a href="./historia.html">Historia</a></li>
+            <li><a href="./juegos.html">Juegos</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
         </ul>
     </nav>
    </header>
    <section class="zona1">
     <img src="../img/juegos.gif" class="zona1" alt="juegos">
    </section>
-   <section>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dignissimos est corrupti molestiae odio, blanditiis autem tempore repudiandae ipsa quod quae tempora cum quaerat ab qui alias, dolores eos placeat ad velit! Quod fugiat ea recusandae neque nihil eum laboriosam facilis corrupti eius et. Et aliquam, eos consequuntur omnis enim iure fugit? Maiores architecto necessitatibus ad sequi iste est corrupti quasi omnis recusandae deserunt dolores, unde reprehenderit facere doloremque, illo id quis dolorum cumque aspernatur totam quidem consequuntur iusto. Dolore laudantium illum magni, aliquid blanditiis eveniet minima, voluptatem consectetur maiores reiciendis debitis consequuntur sunt voluptatibus quasi sed ipsum similique quis!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam quaerat possimus reprehenderit dolorem laborum libero nisi facilis vel. Quas, harum optio dolorem maiores officiis vero eligendi, similique dolor id ipsam cumque laboriosam illo repellendus dignissimos cupiditate quaerat, vel cum? Molestias dolorem voluptas fugiat voluptatibus pariatur rerum magnam reiciendis quidem corrupti a porro cupiditate ad debitis vitae, dolore, laborum labore qui reprehenderit. Reprehenderit consequuntur quam laudantium ratione sed hic error ipsum, tempore doloremque nemo, officiis neque commodi minima fugiat, modi facere mollitia nisi nulla id. Aut iste, labore totam praesentium excepturi cumque voluptatem, consectetur culpa autem ratione nesciunt sunt facilis asperiores.</p>
-   </section>
+
+   <main>
+    <section class="section1">
+        <h1>Juego de Memoria</h1>
+        <table>
+            <tr>
+                <td><button id="0" onclick="descubrir(0)"></button></td>
+                <td><button id="1" onclick="descubrir(1)"></button></td>
+                <td><button id="2" onclick="descubrir(2)"></button></td>
+                <td><button id="3" onclick="descubrir(3)"></button></td>
+            </tr>
+            <tr>
+                <td><button id="4" onclick="descubrir(4)"></button></td>
+                <td><button id="5" onclick="descubrir(5)"></button></td>
+                <td><button id="6" onclick="descubrir(6)"></button></td>
+                <td><button id="7" onclick="descubrir(7)"></button></td>
+            </tr>
+            <tr>
+                <td><button id="8" onclick="descubrir(8)"></button></td>
+                <td><button id="9" onclick="descubrir(9)"></button></td>
+                <td><button id="10" onclick="descubrir(10)"></button></td>
+                <td><button id="11" onclick="descubrir(11)"></button></td>
+            </tr>
+            <tr>
+                <td><button id="12" onclick="descubrir(12)"></button></td>
+                <td><button id="13" onclick="descubrir(13)"></button></td>
+                <td><button id="14" onclick="descubrir(14)"></button></td>
+                <td><button id="15" onclick="descubrir(15)"></button></td>
+            </tr>
+        </table>
+    </section>
+    <section class="section2">
+        <h2 id="aciertos" class="estadisticas">Aciertos: 0</h2>
+        <h2 id="t-restante" class="estadisticas">Tiempo: 30 segundos</h2>
+        <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
+    </section>
+   </main>
+   <footer class="icono">
+    
+      
+      <a href="https://github.com/AndySolari/Mundo_Magico">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+    <p>Juego programado por Andrea Solari</p>
+   </footer>
    <script src="../js/script.js"></script>
 </body>
 </html>

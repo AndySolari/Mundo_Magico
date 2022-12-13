@@ -1,0 +1,60 @@
+/* body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+    box-sizing: border-box;
+} */
+form{
+    background-color: rgb(10, 10, 10);
+    border-radius: 15px;
+    border: 2px solid #e7e7e7;
+    margin: 0% auto;
+    padding: 20px;
+    color: rgb(56, 55, 55);
+    font-size: 0.8em;
+    width: 400px;
+    margin-top: 30px;
+    
+}
+
+.field{
+    border: solid 1px #ccd;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.field:focus{
+    border-color: rgb(82, 77, 77);
+}
+
+.center-content{
+    text-align: center;
+}
+
+input, textarea{
+    border: 0;
+    outline: none;
+    width: 330px;
+}
+
+
+
+.btn{
+    border-radius: 8px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration:none;
+    text-shadow: 0 2px 0 rgba(255,255,255,0.3);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.btn-aqua{
+    color:black;
+    background-color: rgba(225, 221, 233, 0.753);
+}
+.btn-aqua:hover{
+    background-color: #549c9cc0;
+}
+.btn-aqua:active{
+    background-color:#d13d3dc0;
+} 
