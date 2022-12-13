@@ -1,31 +1,39 @@
-body{
-    color:white;
+body {
+    color: white;
 }
-main{
+
+main {
     width: 730px;
     margin: 100px auto 50px;
     display: flex;
     align-items: center;
 }
-.section1{
+
+
+
+.section1 {
     background-color: hsla(34, 4%, 34%, 0.418);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-button{
+
+button {
     height: 100px;
     width: 100px;
     font-size: 40px;
     color: black;
     font-weight: bold;
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
 }
-.section2{
+
+.section2 {
     background-color: hsla(180, 4%, 34%, 0.116);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -33,17 +41,16 @@ button:hover{
     height: 400px;
     padding: 0 20px;
 }
-.estadisticas{
-    border: 1px solid white;
+
+.estadisticas {
+    border: 3px solid white;
     height: 105px;
     border-radius: 8px;
-    padding: 8px 20px;
+    padding: 4px 10px;
     box-sizing: border-box;
+    font-size: 20px;
+    margin-top: 10px;
+    margin: 10px;
 }
-footer{
-    text-align: center;
-}
-a{
-    text-decoration: none;
-}
+
 
